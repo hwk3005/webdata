@@ -15,8 +15,8 @@ import random
 # 크롬 옵션 설정 - 셀레니움 접근 제한 : 보안접근 해제
 options = Options()
 options.add_argument("--disable-blink-features=AutomationControlled")  # 자동화 티 안 나게
-options.add_argument("start-maximized")
-options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36")
+options.add_argument("start-maximized")  # 브라우저 창 최대화
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36")  # 사용자 에이전트 변경
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 
@@ -42,21 +42,21 @@ elem = browser.find_element(By.XPATH,'//*[@id="__next"]/div/main/div[2]/div/div/
 elem.click()
 time.sleep(2)
 
-# # 4. 김포선택
+# 4. 김포선택
 elem = browser.find_element(By.XPATH,'//*[@id="__next"]/div/main/div[8]/div[2]/div/div/ul[1]/li[3]/button')
 elem.click()
 time.sleep(2)
 
-# # 5. 도착지 선택
+# 5. 도착지 선택
 elem = browser.find_element(By.XPATH,'//*[@id="__next"]/div/main/div[2]/div/div/div[2]/div[1]/button[2]/b')
 elem.click()
 time.sleep(2)
 
-# # 6. 제주선택
+# 6. 제주선택
 browser.find_element(By.XPATH,'//*[@id="__next"]/div/main/div[8]/div[2]/div[2]/div[2]/ul[1]/li[1]/button').click()
 time.sleep(2)
 
-# # 7. 가는날 선택
+# 7. 가는날 선택
 browser.find_element(By.XPATH,'//*[@id="__next"]/div/main/div[2]/div/div/div[2]/div[2]/button[1]').click()
 time.sleep(2)
 

@@ -1,9 +1,4 @@
 import smtplib
-from email.mime.text import MIMEText
-
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email import encoders
 
 ### 퀴즈 ###
 # news.csv
@@ -17,6 +12,11 @@ from email import encoders
 # 보내는주소: onulee@naver.com
 
 
+from email.mime.text import MIMEText
+
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 
 # 중요정보
 recvMail = "hwk3005@naver.com"
